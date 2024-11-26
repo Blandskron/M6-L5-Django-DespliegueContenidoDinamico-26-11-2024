@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dashboard{% endblock %}</title>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-dark bg-dark text-white p-3">
+        <a class="navbar-brand" href="#">EduDashboard</a>
+    </header>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav class="bg-light border-right" style="width: 250px; height: 100vh;">
+            <ul class="nav flex-column p-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Estudiantes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reportes</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1 p-4">
+            {% block content %}
+            <h1>Bienvenido al Dashboard</h1>
+            <p>Aquí puedes administrar tus datos.</p>
+            {% endblock %}
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-auto">
+        © 2024 EduDashboard - Todos los derechos reservados.
+    </footer>
+
+    {% bootstrap_javascript jquery="full" %}
+</body>
+</html>

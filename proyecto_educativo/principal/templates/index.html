@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>hola</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">¡Hola Mundo!</h1>
+    <p class="lead">{{ message }}</p>
+    <hr class="my-4">
+    <p>Este es un proyecto educativo con Django.</p>
+</div>
+{% endblock %}
